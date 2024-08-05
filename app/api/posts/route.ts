@@ -17,7 +17,7 @@ export const POST = async (req : any) => {
 export const GET = async () => {
     await connectDB();
     const posts = await Post.find();
-    return NextResponse.json({posts})
+    return NextResponse.json(posts)
 }
 
 export const DELETE = async (req : any) => {

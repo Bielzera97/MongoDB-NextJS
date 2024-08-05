@@ -1,4 +1,4 @@
-
+import Posts from "@/app/components/Posts";
 
 
 
@@ -8,7 +8,7 @@ export default function Home() {
 
   return (
     <main>
-      Ola mundo
+      <Posts/>
     </main>
   );
 }

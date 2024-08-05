@@ -1,6 +1,5 @@
 import connectDB from "@/lib/mongodb";
 import Post from "@/model/Post";
-import { connect } from "http2";
 import { NextResponse } from "next/server";
 
 export const PUT = async (req : any , {params} : any) => {
