@@ -2,22 +2,17 @@
 import { useEffect, useState } from "react"
 
 
-interface Post{
-    _id: string
-    user: string,
-    post: string
-}
 
 
 
 const Posts =  () => {
 
-    const [posts, setPosts] = useState<Post[]>([])
+    const [posts, setPosts] = useState([])
     
     useEffect(() => {
         const fetchPost = async () => {
-            const res = await fetch("http://localhost:3000/api/posts");
-            const posts = (await res.json()) as Post[]
+            const res = await fetch("http://localhost:3000/api/posts", {cache: 'no-store'});
+            const posts = await res.json()  
             setPosts(posts)
         }
 
